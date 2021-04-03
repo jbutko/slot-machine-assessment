@@ -3,6 +3,7 @@ import React, { useContext, useReducer } from 'react';
 import { AppContext } from './app.context';
 import * as CONSTANTS from './app.constants';
 import { appReducer, initialState } from './app.reducer';
+import { ESymbols } from 'types';
 
 const Store = AppContext;
 Store.displayName = 'AppStore';
@@ -22,7 +23,7 @@ export const StoreProvider: React.FC = ({ children }) => {
     dispatch({ type: CONSTANTS.TYPE_SET_RUNNING, payload: { reelIndex, isRunning } });
 
   const actionToggleSwitch = () =>
-    dispatch({ type: CONSTANTS.TYPE_CHANGE_DEBUG_MODE, payload: !state.debugMode });
+    dispatch({ type: CONSTANTS.TYPE_CHANGE_DEBUG_MODE, payload: !state.debugMode.enabled });
 
   const actionRepositionReels = (reelIndex: number) =>
     dispatch({
@@ -44,6 +45,16 @@ export const StoreProvider: React.FC = ({ children }) => {
       payload: null,
     });
 
+  const actionSetDebugColumn = (column: number, position: number, symbol: ESymbols) =>
+    dispatch({
+      type: CONSTANTS.TYPE_SET_DEBUG_COLUMN,
+      payload: {
+        column,
+        position,
+        symbol,
+      },
+    });
+
   const selectorCheckIsRunning = () =>
     state.running.reel1 || state.running.reel2 || state.running.reel3;
 
@@ -59,6 +70,7 @@ export const StoreProvider: React.FC = ({ children }) => {
           actionResetWins,
           actionToggleRun,
           actionToggleSwitch,
+          actionSetDebugColumn,
         },
         selectors: {
           selectorCheckIsRunning,

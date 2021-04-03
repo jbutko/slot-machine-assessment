@@ -29,5 +29,6 @@ const Container = styled(Column)`
     }
   }
 
-  animation: reveal 0.2s linear;
+  animation: reveal 0.3s linear;
+  animation-iteration-count: 3;
 `;

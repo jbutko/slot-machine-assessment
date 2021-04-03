@@ -35,6 +35,14 @@ export const PayTable: React.FC = () => {
         highlighted={reelsWins[2].symbols === sameSymbolsMap.CHERRIES}
       />
       <PayTableRow
+        symbols={[ESymbols.SEVEN, ESymbols.SEVEN, ESymbols.SEVEN]}
+        position='ANY row'
+        sum={150}
+        highlighted={winRowSymbols.some(
+          i => i === String([ESymbols.SEVEN, ESymbols.SEVEN, ESymbols.SEVEN])
+        )}
+      />
+      <PayTableRow
         text='Combination of '
         symbols={[ESymbols.CHERRY, ESymbols.SEVEN]}
         position='ANY row'

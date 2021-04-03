@@ -4,13 +4,16 @@ import { Switch } from '@rebass/forms';
 import { Column } from 'components/Column';
 import { Row } from 'components/Row';
 import { Heading } from 'components/Heading';
+import { DebugSelection } from './components/DebugSelection';
 import { useStore } from 'store';
 
 interface IDebugModeProps {}
 
 export const DebugMode: React.FC<IDebugModeProps> = () => {
-  const { state, actions } = useStore();
-  const { actionToggleSwitch } = actions;
+  const {
+    state,
+    actions: { actionToggleSwitch },
+  } = useStore();
 
   return (
     <Column>
@@ -18,11 +21,12 @@ export const DebugMode: React.FC<IDebugModeProps> = () => {
       <Row width='100%' justifyContent='space-between' px='10px'>
         Enable debug mode:{' '}
         <Switch
-          checked={state.debugMode}
+          checked={state.debugMode.enabled}
           onClick={() => actionToggleSwitch()}
           sx={{ ':hover': { cursor: 'pointer' } }}
         />
       </Row>
+      {state.debugMode.enabled && <DebugSelection />}
     </Column>
   );
 };
