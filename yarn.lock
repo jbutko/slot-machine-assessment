@@ -2215,6 +2215,18 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
+"@types/lodash.unzip@^3.4.6":
+  version "3.4.6"
+  resolved "https://registry.yarnpkg.com/@types/lodash.unzip/-/lodash.unzip-3.4.6.tgz#98dc1a32730d1af9281e8abd1b18e40557358750"
+  integrity sha512-AS0J8P/Ze230NowOCSlv5akfAnXCAzD07Z5eaEBpoDoJb9njApwP1IK6iW+WvZKpzp6mtqf5Ufn1w8cQvBu4Qw==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.168"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.168.tgz#fe24632e79b7ade3f132891afff86caa5e5ce008"
+  integrity sha512-oVfRvqHV/V6D1yifJbVRU3TMp8OT6o6BG+U9MkwuJ3U8/CsDHvalRpsxBqivn71ztOFZBTfJMvETbqHiaNSj7Q==
+
 "@types/minimatch@*":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
@@ -7713,6 +7725,11 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
+
+lodash.unzip@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.unzip/-/lodash.unzip-3.4.0.tgz#99523e589832e0b4e1e8002462cd3c4501ba909f"
+  integrity sha1-mVI+WJgy4LTh6AAkYs08RQG6kJ8=
 
 "lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.5:
   version "4.17.15"
