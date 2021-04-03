@@ -10,7 +10,7 @@ interface IDebugModeProps {}
 
 export const DebugMode: React.FC<IDebugModeProps> = () => {
   const { state, actions } = useStore();
-  const { toggleSwitch } = actions;
+  const { actionToggleSwitch } = actions;
 
   return (
     <Column>
@@ -19,7 +19,7 @@ export const DebugMode: React.FC<IDebugModeProps> = () => {
         Enable debug mode:{' '}
         <Switch
           checked={state.debugMode}
-          onClick={() => toggleSwitch()}
+          onClick={() => actionToggleSwitch()}
           sx={{ ':hover': { cursor: 'pointer' } }}
         />
       </Row>

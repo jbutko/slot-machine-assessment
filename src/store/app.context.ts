@@ -7,6 +7,9 @@ type TAppContext = {
   actions: {
     [name: string]: Function;
   };
+  selectors: {
+    [name: string]: Function;
+  };
 };
 
 export const AppContext = createContext({} as TAppContext);

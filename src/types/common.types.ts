@@ -11,3 +11,8 @@ export enum EAgentFormBlock {
   VISIBLE_OPTIONAL = 1,
   VISIBLE_REQUIRED = 2,
 }
+
+export interface IRowWin {
+  value: number;
+  symbols: string;
+}

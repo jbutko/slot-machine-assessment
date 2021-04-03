@@ -6,14 +6,14 @@ import { useStore } from 'store';
 
 export const Balance: React.FC = () => {
   const { state, actions } = useStore();
-  const { changeBalance } = actions;
+  const { actionChangeBalance } = actions;
   return (
     <Row mr='20px'>
       <Input
         max={5000}
         min={1}
         name='balance'
-        onChange={e => changeBalance(Number(e.target.value))}
+        onChange={e => actionChangeBalance(Number(e.target.value), 'isUserInput')}
         placeholder='Change your balance...'
         type='number'
         value={state.balance}

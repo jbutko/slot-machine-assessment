@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Box } from 'rebass';
 
 import { ESymbols } from 'types';
 import { Row } from 'components/Row';
@@ -7,7 +6,7 @@ import { Symbol } from 'components/Symbol';
 import { Badge } from 'components/Badge';
 
 interface IPayTableRowProps {
-  text: string;
+  text?: string;
   symbols: ESymbols[];
   sum: number;
   position?: string;
@@ -29,9 +28,9 @@ export const PayTableRow: React.FC<IPayTableRowProps> = ({
     my='2px'
   >
     <Row alignItems='center' mr='20px'>
-      {text}{' '}
-      {symbols.map(symbol => (
-        <Symbol symbol={symbol} width={['35px']} key={symbol} />
+      {text && <>{text} </>}
+      {symbols.map((symbol, idx) => (
+        <Symbol symbol={symbol} width={['35px']} key={`${idx}-${symbol}`} />
       ))}{' '}
       {position}
     </Row>
