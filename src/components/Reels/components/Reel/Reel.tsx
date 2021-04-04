@@ -54,7 +54,7 @@ const getAnimationDuration = (reelIndex: number) => {
 
 const Container = styled(Column)<IReelProps & { topOffset: number }>`
   // set reel position
-  transform: translateY(${props => -1 * props.topOffset - 0}px);
+  transform: translateY(${props => -1 * props.topOffset - 15}px);
   transition: transform 0s;
 
   // spinnig reel animation
@@ -73,20 +73,3 @@ const Container = styled(Column)<IReelProps & { topOffset: number }>`
   animation-iteration-count: ${({ running, reelIndex }) => (running ? 'infinite' : 1)};
   animation-fill-mode: forwards;
 `;
-
-// animation: ${({ running, reelIndex }) => (running ? 'spinReel 1s linear' : 'none')};
-// animation-play-state: ${({ running }) => (running ? 'running' : 'paused')};
-// animation-iteration-count: ${({ running, reelIndex }) => (running ? 'infinite' : 1)};
-// animation-fill-mode: forwards;
-
-// animation: ${({ running, reelIndex }) =>
-//   running ? 'spinReel 0.' + getAnimationDuration(reelIndex) + 's linear' : 'none'};
-
-// animation-name: ${({ running, reelIndex }) => (running ? 'spinReel' : 'none')};
-// animation-duration: ${({ running }) => (running ? '1s' : 'none')};
-// animation-timing-function: linear;
-// animation-delay: 0;
-// animation-iteration-count: ${({ running }) => (running ? 'infinite' : 'none')};
-// animation-direction: normal;
-// animation-fill-mode: forwards;
-// animation-play-state: ${({ running }) => (running ? 'running' : 'paused')};

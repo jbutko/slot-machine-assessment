@@ -13,7 +13,7 @@ export const ReelWinRow: React.FC<IReelWinRowProps> = ({ isVisible, rowIndex }) 
       height='7px'
       bg='red'
       width='97%'
-      top={`${rowIndex * 100 + 45}px`}
+      top={`${rowIndex * 100 + 30}px`}
       position='absolute'
       zIndex={2}
     />
@@ -29,6 +29,6 @@ const Container = styled(Column)`
     }
   }
 
-  animation: reveal 0.3s linear;
-  animation-iteration-count: 3;
+  animation: reveal 0.5s linear;
+  animation-iteration-count: 2;
 `;

@@ -9,7 +9,7 @@ import { Reels } from 'components/Reels';
 import { Row } from 'components/Row';
 
 export const HomePage: React.FC = () => (
-  <Column alignItems='center' width='100%' padding='10px'>
+  <Column alignItems='center' width='100%' padding='10px' maxWidth='1400px' margin='0 auto'>
     <Heading mb='50px'>Slot machine assessment</Heading>
     <Row width='100%' maxWidth='80%'>
       <Column width='65%'>
