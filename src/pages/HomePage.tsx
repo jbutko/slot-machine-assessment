@@ -17,8 +17,8 @@ export const HomePage: React.FC = () => (
         <GameControls />
       </Column>
       <Column width='35%'>
-        <DebugMode />
         <PayTable />
+        <DebugMode />
       </Column>
     </Row>
   </Column>

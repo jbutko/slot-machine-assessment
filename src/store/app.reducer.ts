@@ -64,8 +64,6 @@ const appReducer = (state = initialState, action: TAction) => {
         debugMode: {
           ...state.debugMode,
           [`column${column}`]: {
-            // ...(typeof position === 'number' && { position }),
-            // ...(typeof symbol === 'string' && { symbol }),
             position,
             symbol,
           },
