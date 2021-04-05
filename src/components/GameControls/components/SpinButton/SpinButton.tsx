@@ -3,9 +3,7 @@ import { Button } from 'rebass';
 
 import { useStore } from 'store';
 
-interface ISpinButtonProps {}
-
-export const SpinButton: React.FC<ISpinButtonProps> = () => {
+export const SpinButton: React.FC = () => {
   const { state, actions, selectors } = useStore();
   const {
     actionToggleRun,

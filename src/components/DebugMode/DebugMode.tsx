@@ -7,9 +7,7 @@ import { Heading } from 'components/Heading';
 import { DebugSelection } from './components/DebugSelection';
 import { useStore } from 'store';
 
-interface IDebugModeProps {}
-
-export const DebugMode: React.FC<IDebugModeProps> = () => {
+export const DebugMode: React.FC = () => {
   const {
     state,
     actions: { actionToggleSwitch },
