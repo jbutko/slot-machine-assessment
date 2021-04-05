@@ -4,7 +4,9 @@ I was given an assessment to code a simple slot machine game. As a development f
 
 ## Styling
 
-The app is styled using [styled-components](https://styled-components.com/) approach. For UI elements, for example buttons and form elements, I chose [rebass framework](https://rebassjs.org/) which makes use of [styled-system](https://styled-system.com/). I think the combination of styled-components and styled-system is by far the best approach to style the (not only react) apps these days. To make an app responsive takes much less time because of quick [declarative notation](https://github.com/jbutko/slot-machine-assessment/blob/master/src/pages/HomePage.tsx#L12).
+The app is styled using [styled-components](https://styled-components.com/) approach. For UI elements, for example buttons and form elements, I chose [rebass framework](https://rebassjs.org/) which makes use of [styled-system](https://styled-system.com/). I think the combination of styled-components and styled-system is by far the best approach to style the (not only react) apps these days. It tooks me almost no time to make the app responsive thanks to quick [declarative notation](https://github.com/jbutko/slot-machine-assessment/blob/master/src/pages/HomePage.tsx#L12).
+
+## React
 
 The entire app is written with typescript and it's classless - only functional components and hooks were utilized. For [global state](https://github.com/jbutko/slot-machine-assessment/blob/master/src/store/app.store.tsx) I choose combination of `useReducer` and `useContext` hooks.
 
