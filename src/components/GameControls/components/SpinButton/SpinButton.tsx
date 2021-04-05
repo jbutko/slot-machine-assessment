@@ -35,6 +35,11 @@ export const SpinButton: React.FC = () => {
   const setNewReelsPosition = (reelIndex: number) => actionRepositionReels(reelIndex - 1);
 
   const onBtnClick = () => {
+    if (state.balance === 0) {
+      alert('Sorry, you ran out of money. Fill the input with some more money...');
+      return;
+    }
+
     runReels();
     actionChangeBalance(--state.balance);
   };
