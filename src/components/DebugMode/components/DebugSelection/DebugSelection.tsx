@@ -17,67 +17,67 @@ export const DebugSelection: React.FC = () => {
     actionSetDebugColumn(column, position, symbol);
 
   return (
-    <Column px='10px' mt='20px'>
-      <Row alignItems='center' mb='10px' justifyContent='space-between'>
+    <Column px={[0, '10px']} mt='20px'>
+      <Row alignItems='center' mb='10px' justifyContent={['flex-start', 'space-between']}>
         <Text fontWeight='bold' mr='10px'>
           1. Column:{' '}
         </Text>
         <Select
           name='positions'
           defaultValue={debugMode.column1.position}
-          minWidth='100px'
-          mr='30px'
+          minWidth={['90px', '100px']}
+          mr={['20px', '30px']}
           onChange={e => setDebugColumn(1, Number(e.target.value), debugMode.column1.symbol)}
         >
           <OptionsPositions />
         </Select>
         <Select
           name='symbols'
-          minWidth='100px'
+          minWidth={['90px', '100px']}
           defaultValue={debugMode.column1.symbol}
           onChange={e => setDebugColumn(1, debugMode.column1.position, e.target.value)}
         >
           <OptionsSymbols />
         </Select>
       </Row>
-      <Row alignItems='center' mb='10px' justifyContent='space-between'>
+      <Row alignItems='center' mb='10px' justifyContent={['flex-start', 'space-between']}>
         <Text fontWeight='bold' mr='10px'>
           2. Column:{' '}
         </Text>
         <Select
           name='positions'
           defaultValue={debugMode.column2.position}
-          minWidth='100px'
-          mr='30px'
+          minWidth={['90px', '100px']}
+          mr={['20px', '30px']}
           onChange={e => setDebugColumn(2, Number(e.target.value), debugMode.column2.symbol)}
         >
           <OptionsPositions />
         </Select>
         <Select
           name='symbols'
-          minWidth='100px'
+          minWidth={['90px', '100px']}
           defaultValue={debugMode.column2.symbol}
           onChange={e => setDebugColumn(2, debugMode.column2.position, e.target.value)}
         >
           <OptionsSymbols />
         </Select>
       </Row>
-      <Row alignItems='center' mb='10px' justifyContent='space-between'>
+      <Row alignItems='center' mb='10px' justifyContent={['flex-start', 'space-between']}>
         <Text fontWeight='bold' mr='10px'>
           3. Column:{' '}
         </Text>
         <Select
           name='positions'
           defaultValue={debugMode.column3.position}
-          minWidth='100px'
-          mr='30px'
+          minWidth={['90px', '100px']}
+          mr={['20px', '30px']}
           onChange={e => setDebugColumn(3, Number(e.target.value), debugMode.column3.symbol)}
         >
           <OptionsPositions />
         </Select>
         <Select
           name='symbols'
-          minWidth='100px'
+          minWidth={['90px', '100px']}
           defaultValue={debugMode.column3.symbol}
           onChange={e => setDebugColumn(3, debugMode.column3.position, e.target.value)}
         >

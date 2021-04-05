@@ -18,7 +18,7 @@ export const DebugMode: React.FC<IDebugModeProps> = () => {
   return (
     <Column>
       <Heading>Debug mode</Heading>
-      <Row width='100%' justifyContent='space-between' px='10px'>
+      <Row width='100%' justifyContent='space-between' px={[0, '10px']}>
         Enable debug mode:{' '}
         <Switch
           checked={state.debugMode.enabled}

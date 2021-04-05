@@ -11,11 +11,13 @@ export const GameControls: React.FC = () => {
     state: { totalWin },
   } = useStore();
   return (
-    <Row alignItems='center'>
-      <Balance />
-      <SpinButton />
+    <Row alignItems='center' flexDirection={['column', 'row']}>
+      <Row>
+        <Balance />
+        <SpinButton />
+      </Row>
       {!!totalWin && (
-        <Row ml='30px'>
+        <Row ml={[0, '30px']} justifyContent={['flex-start', 'flex-end']} my={['10px', 0]}>
           <Text mr='10px'>Total win: </Text>
           <Text fontWeight='bold'>{totalWin}</Text>
         </Row>

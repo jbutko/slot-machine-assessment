@@ -23,11 +23,11 @@ export const PayTableRow: React.FC<IPayTableRowProps> = ({
   <Row
     justifyContent='space-between'
     alignItems='center'
-    padding='2px 10px'
+    padding={[0, '2px 10px']}
     bg={highlighted ? '#f9c7f0' : 'transparent'}
     my='2px'
   >
-    <Row alignItems='center' mr='20px'>
+    <Row alignItems='center' mr={['5px', '20px']}>
       {text && <>{text} </>}
       {symbols.map((symbol, idx) => (
         <Symbol symbol={symbol} width={['35px']} key={`${idx}-${symbol}`} />
